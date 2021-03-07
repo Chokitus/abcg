@@ -1,0 +1,258 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 16:46:49 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+  Criando o diretório "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.74
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 16:46:50 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+  Criando o diretório "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.59
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 16:46:51 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+  Criando o diretório "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.55
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 16:46:51 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+  Criando o diretório "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdCXX\CompilerIdCXX.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.54
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 17:25:40 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+  Criando o diretório "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.80
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft(R) Build Engine versão 16.5.0+d4cbfca49 para .NET Framework 
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Compilação de 06/03/2021 17:35:30 iniciada.
+Projeto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" no nó 1 (destinos padrão).
+PrepareForBuild:
+  Criando o diretório "Debug\".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+  Criando o diretório "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Criando "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc142.pdb" /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+Projeto de compilação pronto "C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destinos padrão) -- FALHA.
+
+FALHA da compilação.
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(PrepareForBuild destino) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(449,5): warning MSB8003: a propriedade WindowsSDKDir não está definida. Algumas ferramentas de build podem não ser encontradas. [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+
+"C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj" (destino padrão) (1) ->
+(Link destino) -> 
+  LINK : fatal error LNK1181: não foi possível abrir o arquivo de entrada 'kernel32.lib' [C:\Users\victo\Documents\UFABC\CG\abcg\examples\CMakeFiles\3.19.3\CompilerIdC\CompilerIdC.vcxproj]
+
+    1 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:00.73
+
+
