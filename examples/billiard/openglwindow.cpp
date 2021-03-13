@@ -9,32 +9,6 @@
 std::unordered_map<std::string, std::string> teste;
 
 void OpenGLWindow::handleEvent(SDL_Event &event) {
-  // Keyboard events
-  if (event.type == SDL_KEYDOWN) {
-    if (event.key.keysym.sym == SDLK_SPACE)
-      m_gameData.m_input.set(static_cast<size_t>(Input::Fire));
-    if (event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w)
-      m_gameData.m_input.set(static_cast<size_t>(Input::Up));
-    if (event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s)
-      m_gameData.m_input.set(static_cast<size_t>(Input::Down));
-    if (event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a)
-      m_gameData.m_input.set(static_cast<size_t>(Input::Left));
-    if (event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d)
-      m_gameData.m_input.set(static_cast<size_t>(Input::Right));
-  }
-  if (event.type == SDL_KEYUP) {
-    if (event.key.keysym.sym == SDLK_SPACE)
-      m_gameData.m_input.reset(static_cast<size_t>(Input::Fire));
-    if (event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w)
-      m_gameData.m_input.reset(static_cast<size_t>(Input::Up));
-    if (event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s)
-      m_gameData.m_input.reset(static_cast<size_t>(Input::Down));
-    if (event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a)
-      m_gameData.m_input.reset(static_cast<size_t>(Input::Left));
-    if (event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d)
-      m_gameData.m_input.reset(static_cast<size_t>(Input::Right));
-  }
-
   // Mouse events
   if (event.type == SDL_MOUSEBUTTONDOWN) {
     m_stick.click = !m_stick.drag;
@@ -83,33 +57,42 @@ void OpenGLWindow::initializeGL() {
 void OpenGLWindow::restart() {
   m_gameData.m_state = State::Playable;
 
-  //m_starLayers.initializeGL(m_starsProgram, 25);
   m_board.initializeGL(m_objectsProgram);
   m_balls.initializeGL(m_objectsProgram);
+  m_holes.initializeGL(m_objectsProgram);
   m_stick.initializeGL(m_stickProgram);
 }
 
 void OpenGLWindow::update() {
+  if (m_gameData.m_state == State::Win &&
+      m_restartWaitTimer.elapsed() > 5) {
+    restart();
+    return;
+  }
+
   float deltaTime{static_cast<float>(getDeltaTime())};
 
   // Se todas pararam, então o modo é Playable
-  m_balls.update(deltaTime, &m_gameData);
-
-  Balls::Ball* white;
+  if (m_gameData.m_state == State::Running) {
+    m_balls.update(deltaTime, &m_gameData);
+  }
 
   if (m_gameData.m_state == State::Playable) {
+    Balls::Ball* white;
     for (auto &ball : m_balls.m_balls) {
       if (ball.isWhite) {
         white = &ball;
         break;
       }
     }
-    m_stick.update(white, true, m_balls.radius);
+    if (m_stick.update(white, true, m_balls.radius)) {
+      m_gameData.m_state = State::Running;
+    }
   }
 
   if (m_gameData.m_state == State::Running) {
     checkCollisions();
-    //checkWinCondition();
+    checkWinCondition();
   }
 }
 
@@ -120,16 +103,19 @@ void OpenGLWindow::paintGL() {
   glViewport(0, 0, m_viewportWidth, m_viewportHeight);
 
   //m_starLayers.paintGL();
+  m_board.paintBackground();
+  m_holes.paintGL();
   m_board.paintGL();
   m_balls.paintGL();
   m_stick.paintGL();
+  
 }
 
 void OpenGLWindow::paintUI() {
   abcg::OpenGLWindow::paintUI();
 
   {
-    auto size{ImVec2(500, 200)};
+    auto size{ImVec2(0, 0)};
     auto position{ImVec2((m_viewportWidth - size.x) / 2.0f,
                          (m_viewportHeight - size.y) / 2.0f)};
     ImGui::SetNextWindowPos(position);
@@ -140,10 +126,8 @@ void OpenGLWindow::paintUI() {
     ImGui::Begin(" ", nullptr, flags);
     ImGui::PushFont(m_font);
 
-    if (m_gameData.m_state == State::GameOver) {
-      ImGui::Text("Game Over!");
-    } else if (m_gameData.m_state == State::Win) {
-      ImGui::Text("*You Win!*");
+    if (m_gameData.m_state == State::Win) {
+      ImGui::Text("You Win!");
     }
 
     ImGui::PopFont();
@@ -168,10 +152,11 @@ void OpenGLWindow::terminateGL() {
 void OpenGLWindow::checkCollisions() {
   for (auto &ball1 : m_balls.m_balls) {
     m_board.checkCollision(&ball1, m_balls.radius);
-    if (ball1.beenHit) continue;
+    if (ball1.beenHit || ball1.beenPocketed) continue;
+    m_holes.isPocketed(&ball1);
 
     for (auto &ball2 : m_balls.m_balls) {
-      if (ball2.beenHit) continue;
+      if (ball2.beenHit || ball2.beenPocketed) continue;
 
       auto ball1Position { ball1.position };
       auto ball2Position { ball2.position };
@@ -188,7 +173,11 @@ void OpenGLWindow::checkCollisions() {
 }
 
 void OpenGLWindow::checkWinCondition() {
-  if (m_balls.m_balls.empty()) {
+  bool allPocketed = true;
+  for (auto &ball : m_balls.m_balls) {
+    allPocketed = allPocketed && (ball.isWhite || ball.beenPocketed);
+  }
+  if (allPocketed) {
     m_gameData.m_state = State::Win;
     m_restartWaitTimer.restart();
   }

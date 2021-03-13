@@ -66,7 +66,7 @@ void Stick::terminateGL() {
   glDeleteVertexArrays(1, &m_vao);
 }
 
-void Stick::update(Balls::Ball* white, bool isPlayable, float radius) {
+bool Stick::update(Balls::Ball* white, bool isPlayable, float radius) {
   if (isPlayable) {
     position = white->position;
     glm::vec2 direction {
@@ -96,6 +96,7 @@ void Stick::update(Balls::Ball* white, bool isPlayable, float radius) {
 
       float force { glm::distance(mousePositionStart, mousePositionEnd) * 5 };
       white->velocity = - normalized * force;
+      return true;
     } else if(drag) {
       if (click) {
         mousePositionStart = mousePosition;
@@ -106,4 +107,5 @@ void Stick::update(Balls::Ball* white, bool isPlayable, float radius) {
       position += normalized * glm::distance(mousePositionStart, mousePositionEnd);
     }
   }
+  return false;
 }

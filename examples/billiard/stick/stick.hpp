@@ -16,7 +16,7 @@ class Stick {
   void paintGL();
   void terminateGL();
 
-  void update(Balls::Ball* white, bool isPlayable, float radius);
+  bool update(Balls::Ball* white, bool isPlayable, float radius);
   void setRotation(float rotation) { m_rotation = rotation; }
   glm::vec2 mousePosition;
 

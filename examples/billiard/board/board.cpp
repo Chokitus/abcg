@@ -45,7 +45,7 @@ void Board::initializeGL(GLuint program) {
   glBindVertexArray(0);
 }
 
-void Board::paintGL() {
+void Board::paintBackground() {
   glUseProgram(m_program);
 
   glBindVertexArray(m_vao);
@@ -58,6 +58,12 @@ void Board::paintGL() {
   glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
 
   glBindVertexArray(0);
+
+  glUseProgram(0);
+}
+
+void Board::paintGL() {
+  glUseProgram(m_program);
 
   for (auto &border : {left, right, up, down}) {
     glBindVertexArray(border.m_vao);

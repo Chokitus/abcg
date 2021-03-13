@@ -21,14 +21,15 @@ void Balls::initializeGL(GLuint program) {
   m_balls.clear();
 
   createDefaultBoard();
-
-  white->velocity = glm::vec2(1.0f);
 }
 
 void Balls::paintGL() {
   glUseProgram(m_program);
 
   for (auto &ball : m_balls) {
+    if (ball.beenPocketed) {
+      continue;
+    }
     glBindVertexArray(ball.m_vao);
 
     glUniform4fv(m_colorLoc, 1, &ball.m_color.r);
@@ -70,12 +71,7 @@ void Balls::update(float deltaTime, GameData* gameData) {
     }
     isRunning = isRunning || glm::length(ball.velocity) > 0;
   }
-  if (isRunning) {
-    gameData->m_state = State::Running;
-  } else {
-    gameData->m_state = State::Playable;
-  }
-  
+  gameData->m_state = isRunning ? State::Running : State::Playable; 
 }
 
 Balls::Ball Balls::createBall(glm::vec2 translation, glm::vec3 color) {
@@ -135,8 +131,8 @@ void Balls::hit(Balls::Ball* ball1, Balls::Ball* ball2) {
 	glm::vec2 normBall2Velocity { normal * glm::dot(normal, ball2->velocity) };
 	glm::vec2 tangBall2Velocity { ball2->velocity - normBall2Velocity };
 	
-	ball1->velocity =  normBall2Velocity + tangBall1Velocity;	
-	ball2->velocity =  normBall1Velocity + tangBall2Velocity;		
+	ball1->velocity = (normBall2Velocity + tangBall1Velocity) * 0.98f;	
+	ball2->velocity = (normBall1Velocity + tangBall2Velocity) * 0.98f;		
 	
 	ball1->position = ball1->position + normal*tmp;
 	ball2->position = ball2->position - normal*tmp;
@@ -166,62 +162,57 @@ void Balls::createDefaultBoard() {
     whiteBall
   );
 
+  // First Column
   m_balls.emplace_back(
-    createBall(glm::vec2(0, 0), rndColor())
+    createBall(glm::vec2(0, 0), glm::vec4(240/255.0f, 181/255.0f, 4/255.0f, 1))
   );
 
+  // Second Column
   m_balls.emplace_back(
     createBall(glm::vec2(sqt3*radius, radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(sqt3*radius, -radius), rndColor())
   );
 
+  // Third Column
   m_balls.emplace_back(
     createBall(glm::vec2(2*sqt3*radius, 0), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(2*sqt3*radius, -2*radius), rndColor())
   );
-
     m_balls.emplace_back(
     createBall(glm::vec2(2*sqt3*radius, 2*radius), rndColor())
   );
 
+  // Fourth Column
   m_balls.emplace_back(
     createBall(glm::vec2(3*sqt3*radius, radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(3*sqt3*radius, -radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(3*sqt3*radius, 3*radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(3*sqt3*radius, -3*radius), rndColor())
   );
 
+  // Fifth Column
   m_balls.emplace_back(
     createBall(glm::vec2(4*sqt3*radius, 0), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(4*sqt3*radius, -2*radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(4*sqt3*radius, 2*radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(4*sqt3*radius, 4*radius), rndColor())
   );
-
   m_balls.emplace_back(
     createBall(glm::vec2(4*sqt3*radius, -4*radius), rndColor())
   );

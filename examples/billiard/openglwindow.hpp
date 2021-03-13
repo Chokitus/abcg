@@ -7,6 +7,7 @@
 
 #include "abcg.hpp"
 #include "balls/balls.hpp"
+#include "holes/holes.hpp"
 #include "board/board.hpp"
 #include "stick/stick.hpp"
 
@@ -31,6 +32,7 @@ class OpenGLWindow : public abcg::OpenGLWindow {
   GameData m_gameData;
 
   Balls m_balls;
+  Holes m_holes;
   Board m_board;
   Stick m_stick;
 

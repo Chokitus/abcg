@@ -11,6 +11,7 @@ class Board {
  public:
   void initializeGL(GLuint program);
   void paintGL();
+  void paintBackground();
   void terminateGL();
   
  private:
