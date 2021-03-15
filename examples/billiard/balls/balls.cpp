@@ -56,18 +56,17 @@ void Balls::update(float deltaTime, GameData* gameData) {
   bool isRunning = false;
   for (auto &ball : m_balls) {
     auto newPosition { ball.position + ball.velocity * deltaTime };
-    auto distance { glm::distance(newPosition, ball.position) };
 
     ball.prevPosition = ball.position;
     ball.position = newPosition;
-    ball.velocity *= pow(frictionEffect, (distance / frictionUnit));
 
     auto velocityAmount { glm::length(ball.velocity) };
 
+    auto frictionRatio { pow(0.5f, (velocityAmount - 1))/2.0f };
+    ball.velocity -= glm::normalize(ball.velocity) * ((frictionRatio < 0.5f ? 0.5f : frictionRatio) * 0.3f * deltaTime);
+
     if (velocityAmount < 0.02f) {
       ball.velocity = glm::vec2(0);
-    } else if (velocityAmount < 0.20f) {
-      ball.velocity *= pow(0.85f, (distance / frictionUnit));
     }
     isRunning = isRunning || glm::length(ball.velocity) > 0;
   }

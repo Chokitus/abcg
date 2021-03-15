@@ -44,7 +44,7 @@ class Balls {
   std::list<Ball> m_balls;
   
   // Should keep from its energy
-  float frictionEffect = 0.95;
+  float frictionEffect = 0.3f;
   // For each of this unit travelled
   float frictionUnit = 0.025;
 
