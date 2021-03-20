@@ -13,7 +13,11 @@ Victor Bressani de Mello
 
 ## Pages:
 
-### [Billiards](billiard/index.html) (1st activity)
+1. **[Billiards](billiard/index.html) (1st activity)**
+
+**Devs:** Victor Bressani de Mello, 21003415
+
+**Descrição:** Primeira atividade da matéria de computação gráfica. É um jogo de bilhar, de controle simples, cujo objetivo é derrubar todas as bolas.
 
 ## License
 
