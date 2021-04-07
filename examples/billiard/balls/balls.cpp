@@ -120,7 +120,7 @@ Balls::Ball Balls::createBall(glm::vec2 translation, glm::vec3 color) {
 
 void Balls::hit(Balls::Ball* ball1, Balls::Ball* ball2) {
 	glm::vec2 normal { ball2->position - ball1->position };
-  float tmp { radius - glm::length(normal) / 2 };	
+  float tmp { radius - glm::length(normal) / 2 };
 	normal = glm::normalize(normal);
 	
 	glm::vec2 normBall1Velocity { normal*glm::dot(normal,ball1->velocity) };

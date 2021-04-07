@@ -55,7 +55,7 @@ void Board::paintBackground() {
 
   glUniform2f(m_translationLoc, left.position.x, left.position.y);
 
-  glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
+  glDrawArrays(GL_TRIANGLE_FAN, 0, 5);
 
   glBindVertexArray(0);
 

@@ -51,7 +51,7 @@ void Holes::paintGL() {
 
     glUniform2f(m_translationLoc, hole.position.x, hole.position.y);
 
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 180 + 2);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, hole.numVertices);
 
     glBindVertexArray(0);
   }
@@ -67,20 +67,24 @@ void Holes::terminateGL() {
 }
 
 Holes::Hole Holes::createHole(glm::vec2 translation, double start, double end) {
+  auto step{M_PI * 2 / 180};
+
   Hole hole {
     .m_color = glm::vec4(0.15f, 0.15f, 0.15f, 1),
-    .position = translation
+    .position = translation,
   };
 
   // Create geometry
   std::vector<glm::vec2> positions(0);
   positions.emplace_back(0, 0);
-  auto step{M_PI * 2 / 180};
+  
   
   for (auto angle : iter::range(start, end, step)) {
     positions.emplace_back(std::cos(angle), std::sin(angle));
   }
   positions.push_back(positions.at(1));
+
+  hole.numVertices = positions.size();
 
   // Generate VBO
   glGenBuffers(1, &hole.m_vbo);

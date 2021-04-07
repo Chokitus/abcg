@@ -22,6 +22,7 @@ class Holes {
 
     glm::vec4 m_color { 1 };
     glm::vec2 position{glm::vec2(0)};
+    int numVertices;
   };
   
  private:

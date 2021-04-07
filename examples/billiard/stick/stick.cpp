@@ -54,7 +54,7 @@ void Stick::paintGL() {
 
   glUniform2f(m_translationLoc, position.x, position.y);
 
-  glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
+  glDrawArrays(GL_TRIANGLE_FAN, 0, 5);
 
   glBindVertexArray(0);
 
