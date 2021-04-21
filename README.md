@@ -31,7 +31,7 @@ Victor Bressani de Mello
 
 **Descrição:** Terceira atividade da matéria de computação gráfica. É o mesmo bootleg do Rocket League usado na atividade 2, porém com a textura e formato de um pato batendo numa bola de praia. Mesmo objetivo: fazer um gol.
 
-![Pato](image/../images/pato.png)
+![Pato](./images/pato.png)
 
 ## License
 
