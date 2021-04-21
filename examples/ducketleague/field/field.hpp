@@ -38,8 +38,6 @@ class Field {
   bool m_hasNormals{false};
   bool m_hasTexCoords{false};
 
-  glm::vec4 color { 58/255.0f, 95/255.0f, 11/255.0f, 1.0f};
-
   void standardize();
 
   void loadDiffuseTexture(std::string_view path);
